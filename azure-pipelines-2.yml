@@ -24,7 +24,7 @@ stages:
       displayName: Build an image
       inputs:
         containerRegistry: 'babu-docker-service-connection-june'
-        repository: 'sridharbdoc0404/2011'
-        command: 'build'
+        repository: 'sridharbdoc0404/newrepo'
+        command: 'buildAndPush'
         Dockerfile: '**/Dockerfile'
         tags: '$(tag)'
