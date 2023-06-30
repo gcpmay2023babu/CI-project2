@@ -42,7 +42,7 @@ jobs:
       echo See https://aka.ms/yaml
     displayName: 'Run a multi-line script'
 
-  job: myJob4
+- job: myJob4
   dependsOn: 
   - myJob2
   - myJob3
