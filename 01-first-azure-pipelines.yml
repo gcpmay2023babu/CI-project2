@@ -10,7 +10,7 @@ pool:
   vmImage: ubuntu-latest
 
 jobs:
-- job: myJob
+- job: myJob1
   steps:
   - script: echo Hello, world!---->From Job1 
     displayName: 'Run a one-line script'
@@ -20,9 +20,21 @@ jobs:
       echo See https://aka.ms/yaml
     displayName: 'Run a multi-line script'
 
-- job: Job1
+- job: myJob2
+  dependsOn: myJob1
   steps:
-  - script: echo Hello, world!----> From Job2
+  - script: echo Hello, world!----> From myJob2
+    displayName: 'Run a one-line script'
+
+  - script: |
+      echo Add other tasks to build, test, and deploy your project.
+      echo See https://aka.ms/yaml
+    displayName: 'Run a multi-line script'
+
+- job: myJob3
+  dependsOn: myJob2
+  steps:
+  - script: echo Hello, world!----> From myJob3
     displayName: 'Run a one-line script'
 
   - script: |
