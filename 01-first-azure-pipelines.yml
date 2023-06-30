@@ -10,7 +10,7 @@ pool:
   vmImage: ubuntu-latest
 
 jobs:
-- job: Job1
+- job: myJob
   steps:
   - script: echo Hello, world!---->From Job1 
     displayName: 'Run a one-line script'
