@@ -10,7 +10,7 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- script: echo Hello, world! Auto Trigger to job!!!!!!!
+- script: Second change july03----> second auto trigger
   displayName: 'Run a one-line script'
 
 - script: |
